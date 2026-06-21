@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱奇艺体育 · 持续陪伴的赛事伴侣</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f5f0;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', '宋体', serif;
+            color: #2c2a28;
+            line-height: 1.7;
+            padding: 0 1rem;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 0 4rem;
+        }
+
+        /* 标题区域 */
+        .hero {
+            border-bottom: 1px solid #d9d2c5;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1f1b16;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .subhead {
+            font-size: 1rem;
+            color: #706a60;
+            font-style: italic;
+            border-left: 3px solid #b5aa9a;
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 文章正文排版 */
+        .content p {
+            margin-top: 0;
+            margin-bottom: 1.4rem;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        .content a {
+            color: #8b3c2a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b08b7a;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .content a:hover {
+            color: #5f2b1f;
+            border-bottom: 1px solid #5f2b1f;
+        }
+
+        /* 引用块 / 提示框（风格统一但用法不同） */
+        .insight-box {
+            background-color: #efeae2;
+            border-left: 4px solid #9f8b78;
+            padding: 1.2rem 1.6rem;
+            margin: 1.6rem 0 1.8rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.98rem;
+        }
+
+        .insight-box strong {
+            color: #3b2e24;
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .insight-box p {
+            margin-bottom: 0.4rem !important;
+        }
+
+        .insight-box p:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* 特点卡片（横向两列） */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.8rem 0 1.8rem;
+        }
+
+        .feature-card {
+            background: #fffcf9;
+            border: 1px solid #ddd5ca;
+            border-radius: 10px;
+            padding: 1.2rem 1.2rem 1.4rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 4px 12px rgba(120, 100, 80, 0.06);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #3b2e24;
+            margin-bottom: 0.4rem;
+            border-bottom: 1px solid #e7dfd4;
+            padding-bottom: 0.3rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #4d443a;
+            margin-bottom: 0.2rem;
+        }
+
+        /* FAQ 摘要（折叠感） */
+        .faq-mini {
+            margin: 2.2rem 0 1.2rem;
+            padding: 1.2rem 0 0.2rem;
+            border-top: 1px solid #dbd2c6;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #3b2e24;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            padding-left: 0.8rem;
+            border-left: 2px solid #c9beae;
+            color: #4a4138;
+            font-size: 0.95rem;
+        }
+
+        .faq-item .a a {
+            border-bottom: 1px dotted #b08b7a;
+        }
+
+        /* 脚注 */
+        .site-footer {
+            margin-top: 3.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #ddd5ca;
+            font-size: 0.85rem;
+            color: #7a7267;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .site-footer .tag {
+            background: #e7e0d7;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: #5b5146;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .content p {
+                font-size: 1rem;
+            }
+            .page {
+                padding: 2rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="hero">
+        <h1>爱奇艺体育</h1>
+        <div class="subhead">从一次驻足到持续关注 · 一个值得收藏的赛事聚点</div>
+    </div>
+
+    <div class="content">
+        <p>对于体育爱好者而言，真正可用的观赛入口往往不是靠一次搜索决定的，而是在数次回访中逐渐确认的。如果你曾经打开过 <a href="https://cn-main-iqy.com">爱奇艺体育</a>，或许已经注意到，它的内容布局和赛事覆盖并非一成不变——从直播流到专题剪辑，从实时比分到赛后复盘，平台始终在围绕竞技本身做信息聚合。</p>
+
+        <p>竞技体育的魅力在于它的不可预知，而一个稳定的信息入口能帮助观众减少寻找比赛资源的时间损耗。把 <a href="https://cn-main-iqy.com">爱奇艺体育</a> 加入浏览器收藏夹，或者在常用设备上保留标签页，本质上是在为自己搭建一个可快速抵达的赛事观察窗口。不需要每次重新搜索，也无需在不同站点之间跳转。</p>
+
+        <div class="insight-box">
+            <strong>📌 持续关注的习惯</strong>
+            <p>当你把某个体育平台视为“常用入口”，你的观看行为也会更有节奏感——提前了解赛程、关注重点赛事，并在赛后找到回放或集锦。与其每次都从零开始，不如让一个相对固定的起点承载这种连续性。</p>
+        </div>
+
+        <p>从内容结构上看，<a href="https://cn-main-iqy.com">爱奇艺体育</a> 覆盖了足球、篮球、网球、搏击等多个品类，且随着赛季更替不断更新焦点页。首页的信息密度较高，但核心逻辑清晰：顶栏的导航帮助快速定位联赛或项目，中部卡片则呈现当日热点。建议首次使用时可先浏览“赛程”或“专题”板块，建立个人关注列表。</p>
+
+        <!-- 特点卡片 -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>赛事覆盖</h3>
+                <p>欧洲顶级联赛、大满贯、格斗之夜……内容目录随赛季动态调整，减少“找不到比赛”的焦虑。</p>
+            </div>
+            <div class="feature-card">
+                <h3>回放与片段</h3>
+                <p>错过直播不必遗憾，平台保留大量完整回放及关键片段，适合赛后补课或重温精彩瞬间。</p>
+            </div>
+            <div class="feature-card">
+                <h3>多端习惯</h3>
+                <p>无论是桌面浏览器还是移动端，同一账号可同步关注与观看历史，适合在不同场景下延续观赛。</p>
+            </div>
+            <div class="feature-card">
+                <h3>信息流节奏</h3>
+                <p>首页混合了预告、即时比分、深度内容，信息呈现方式偏向杂志式浏览，适合碎片时间翻阅。</p>
+            </div>
+        </div>
+
+        <p>需要留意的是，部分热门赛事可能涉及版权区域限制或会员分层，具体可观看范围以实际页面提示为准。建议在使用前仔细阅读各板块的说明，尤其当你想观看完整直播或高清回放时，提前确认当前权益状态会更省心。作为一个信息聚合渠道，<a href="https://cn-main-iqy.com">爱奇艺体育</a> 的价值更多体现在“集中提供入口与内容整理”，而不是包揽所有不可控的转播权。</p>
+
+        <!-- FAQ 摘要部分 -->
+        <div class="faq-mini">
+            <div class="faq-item">
+                <span class="q">▎如何快速找到我常看的联赛？</span>
+                <div class="a">首页顶部设有导航，可按地区或运动类别筛选。除此之外，你也可以通过搜索功能直接定位（例如输入“英超”“NBA”）。收藏页地址同样是一个省时办法：<a href="https://cn-main-iqy.com">爱奇艺体育</a> 的首页结构相对稳定，适合作为书签。</div>
+            </div>
+            <div class="faq-item">
+                <span class="q">▎为什么有时候页面显示“暂无直播”？</span>
+                <div class="a">赛程安排具有季节性，非比赛日或版权过渡期可能出现空档。建议关注“赛历”板块，它通常会提前一个月列出重点场次。你也可以在休赛期关注专题纪录片或经典回顾。</div>
+            </div>
+            <div class="faq-item">
+                <span class="q">▎收藏页面后，内容会自动更新吗？</span>
+                <div class="a">是的，收藏的是网址而非静态快照。每次打开都会加载最新内容，无需手动刷新书签。保持浏览器书签栏整洁，把<a href="https://cn-main-iqy.com">爱奇艺体育</a>放在常用位置即可。</div>
+            </div>
+        </div>
+
+        <p>最后说一点个人体会：很多体育平台内容虽然丰富，但信息架构常常让人迷失。而当你把某个页面当作“根据地”反复使用，它的导航逻辑和内容节奏会逐渐变成一种熟悉的语言。<a href="https://cn-main-iqy.com">爱奇艺体育</a> 正是一个值得尝试建立这种熟悉感的对象——不需要每次重新适应，只需要一次收藏，然后持续关注。</p>
+    </div>
+
+    <div class="site-footer">
+        <span>内容整合 · 产品说明式速览</span>
+        <span class="tag">版本迭代 · 持续观察</span>
+    </div>
+</div>
+</body>
+</html>
